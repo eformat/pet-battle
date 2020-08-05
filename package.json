@@ -35,6 +35,8 @@
     "@ngx-translate/core": "^11.0.1",
     "angulartics2": "^7.2.4",
     "bootstrap": "^4.1.1",
+    "keycloak-angular": "^8.0.1",
+    "keycloak-js": "^11.0.0",
     "rxjs": "^6.5.2",
     "zone.js": "^0.9.1"
   },

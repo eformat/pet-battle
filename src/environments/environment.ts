@@ -16,7 +16,12 @@ export const environment = {
   version: env.npm_package_version + '-dev',
   serverUrl: '',
   defaultLanguage: 'en-US',
-  supportedLanguages: ['en-US', 'fr-FR']
+  supportedLanguages: ['en-US', 'fr-FR'],
+  keycloakConfig: {
+    clientId: 'pbclient',
+    realm: 'pbrealm',
+    url: 'http://localhost:8080/auth'
+  }
 };
 
 /*

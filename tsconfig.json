@@ -16,8 +16,11 @@
     "baseUrl": "./",
     "paths": {
       "@app/*": ["src/app/*"],
-      "@env/*": ["src/environments/*"]
-    }
+      "@env/*": ["src/environments/*"],
+      "auth-oidc": ["dist/auth-oidc"],
+      "auth-oidc/*": ["dist/auth-oidc/*"]
+    },
+    "skipLibCheck": true
   },
   "angularCompilerOptions": {
     "preserveWhitespaces": true
