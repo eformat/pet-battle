@@ -12,19 +12,19 @@ import { ConfigurationLoader } from '@app/config/configuration-loader.service';
 @NgModule({
   imports: [HttpClientModule, OAuthModule.forRoot()],
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      deps: [ConfigurationLoader, AuthConfigService],
-      useFactory: (configSvc: ConfigurationLoader, authConfigService: AuthConfigService) => {
-        return () => {
-          // to ensure the config for keycloak is avail prior to trying to connect to it....
-          return configSvc.loadConfiguration().then(() => {
-            return authConfigService.initAuth();
-          });
-        };
-      },
-      multi: true
-    },
+    // {
+    //   provide: APP_INITIALIZER,
+    //   deps: [ConfigurationLoader, AuthConfigService],
+    //   useFactory: (configSvc: ConfigurationLoader, authConfigService: AuthConfigService) => {
+    //     return () => {
+    //       // to ensure the config for keycloak is avail prior to trying to connect to it....
+    //       return configSvc.loadConfiguration().then(() => {
+    //         return authConfigService.initAuth();
+    //       });
+    //     };
+    //   },
+    //   multi: true
+    // },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
